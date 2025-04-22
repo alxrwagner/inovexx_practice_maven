@@ -1,12 +1,15 @@
 package lesson_1.animals;
 
 
+import lombok.Getter;
+
 public abstract class Animal {
     protected String type;
     protected String name;
     protected int maxSwimming;
     protected int maxRunning;
 
+    @Getter
     static int counter;
 
     public Animal(String name) {
@@ -25,8 +28,5 @@ public abstract class Animal {
         }
     }
 
-    public static int getCounter() {
-        return counter;
-    }
 }
 

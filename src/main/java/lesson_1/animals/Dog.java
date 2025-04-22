@@ -1,6 +1,9 @@
 package lesson_1.animals;
 
+import lombok.Getter;
+
 public class Dog extends Animal{
+    @Getter
     static int counter;
 
     public Dog(String name) {
@@ -11,7 +14,4 @@ public class Dog extends Animal{
         counter++;
     }
 
-    public static int getCounter() {
-        return counter;
-    }
 }
