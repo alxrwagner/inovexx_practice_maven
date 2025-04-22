@@ -1,13 +1,11 @@
 package lesson_2.obstacles;
 
 import lesson_2.actions.Jump;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class Wall extends Obstacle{
     private final float height;
-
-    public Wall(float height) {
-        this.height = height;
-    }
 
     @Override
     public boolean overcoming(Object o) {

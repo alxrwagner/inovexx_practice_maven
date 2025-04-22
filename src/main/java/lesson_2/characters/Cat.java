@@ -2,22 +2,16 @@ package lesson_2.characters;
 
 import lesson_2.actions.Jump;
 import lesson_2.actions.Run;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@AllArgsConstructor
 public class Cat implements Run, Jump {
+    @Getter
     private final String name;
-
-    public String getName() {
-        return name;
-    }
 
     private final float maxRunDistance;
     private final float maxHeightJump;
-
-    public Cat(String name, float maxRunDistance, float maxHeightJump) {
-        this.name = name;
-        this.maxRunDistance = maxRunDistance;
-        this.maxHeightJump = maxHeightJump;
-    }
 
     @Override
     public boolean jump(float heightJump) {

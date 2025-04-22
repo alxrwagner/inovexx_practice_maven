@@ -1,13 +1,11 @@
 package lesson_2.obstacles;
 
 import lesson_2.actions.Run;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class Treadmill extends Obstacle {
     private final float length;
-
-    public Treadmill(float length) {
-        this.length = length;
-    }
 
     @Override
     public boolean overcoming(Object o) {
