@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Box<T extends Fruit> implements Comparable<Box <T>> {
+public class Box<T extends Fruit> implements Comparable<Box<T>> {
 
     private final List<T> fruits;
     @Getter
@@ -25,17 +25,12 @@ public class Box<T extends Fruit> implements Comparable<Box <T>> {
             this.weight = fruits.stream().map(Fruit::getWeight).reduce(0.0f, Float::sum);
         }
     }
-
-    public void add(T fruit) {
-        this.fruits.add(fruit);
+    public void add(Collection<T> fruits) {
+        this.fruits.addAll(fruits);
         counterWight();
     }
 
-    public void add(Collection<T> fruits) {
-
-    }
-
-    public void add(T ... fruit){
+    public void add(T... fruit) {
         this.fruits.addAll(List.of(fruit));
         counterWight();
     }
