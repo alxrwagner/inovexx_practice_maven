@@ -20,8 +20,40 @@
       <version>1.18.30</version>
       <scope>provided</scope>
     </dependency>
+      <!-- Hibernate Core -->
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-core</artifactId>
+          <version>6.4.4.Final</version> <!-- Актуальная версия на 2024 г. -->
+      </dependency>
+
+      <!-- Драйвер базы данных (например, PostgreSQL) -->
+      <dependency>
+          <groupId>org.postgresql</groupId>
+          <artifactId>postgresql</artifactId>
+          <version>42.7.1</version>
+      </dependency>
   </dependencies>
   <build>
     <finalName>inovexx_practice_maven</finalName>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>9</source>
+                  <target>9</target>
+              </configuration>
+          </plugin>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <annotationProcessorPaths>
+                      <!-- Ваши процессоры -->
+                  </annotationProcessorPaths>
+              </configuration>
+          </plugin>
+      </plugins>
   </build>
 </project>
