@@ -23,4 +23,8 @@ public class Buyer {
             inverseJoinColumns = @JoinColumn(name = "id_product")
     )
     private List<Product> products;
+
+    public List<Product> getProducts() {
+        return products;
+    }
 }

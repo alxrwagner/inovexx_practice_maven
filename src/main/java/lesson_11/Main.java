@@ -1,5 +1,7 @@
 package lesson_11;
 
+import lesson_11.service.Service;
+
 public class Main {
     public static void main(String[] args) {
         //QUERY
@@ -21,7 +23,12 @@ public class Main {
 //        );
 //
 //        ALTER TABLE basket ADD COLUMN price NUMERIC (10, 2);
+//        UPDATE basket b
+//        SET price = (SELECT p.price FROM products p WHERE p.id = b.id_product);
 //
 //        SELECT * FROM basket;
+
+        Service service = new Service();
+        service.showProductsByPerson("John").forEach(System.out::println);
     }
 }
